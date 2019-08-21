@@ -177,8 +177,10 @@ class Calendar {
   }
 
   chooseDate(date) {
+    const { onDayClick } = this.options;
     this.options.currentDate = date;
     this.renderDays();
+    onDayClick && onDayClick(date);
   }
 
   switchMonth(action) {
