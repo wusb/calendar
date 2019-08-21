@@ -1,0 +1,93 @@
+.container {
+  width: 100vw;
+}
+
+.controller {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  height: 74px;
+}
+
+.showMonth {
+  margin: 0 40px;
+  font-size: 30px;
+  color: #000;
+}
+
+.controllerArrow {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  border: 0;
+  background-size: 16px 24px;
+  background-position: center;
+  background-color: #f7f8fc;
+  background-repeat: no-repeat;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAYCAYAAADzoH0MAAAAAXNSR0IArs4c6QAAAnFJREFUOBGVVF1rE0EUnXt3tzFtWmqjKYKfqIhVa1L8FQVRWtwnXwRhidXGDwQf81oCUQMioZRCHwNSgiD4lD9QSYVKsA8KbaW1jbamX8adnWsmMnESbYz7cs6ee8/ZnZm7y9h/Xk/Gs70TE9lOZQNFWsGx1IvDJoozxNDttNpmHOfyTssBj59PHxceP6keREDlYPvBGUMJzTD5LHuKhHtC70EEQe72atMAIoLu0MWzRPxInZnEdxZib2I37L2XEI/HsSvYd44AQrqZIW5b3J8fHR0sS/2ve5DJZIzFFexnSD262QAs+c1js45zyVU6KqIwnU5bS58x0mhGhusbaz153Sw9dW+QSr3yCdwJe4wCKlCigbAWiw7PAYDQdclrAclkxk8+iDBifr3JMq3lO86VQsVMuq549RQSU687mOcNANE+VfiFxuLd6NX3e5llD8qjskqb54E8n24mk5Yf3B6ab2auBsgGC8Q7QOJ1AS6ExrSZ12s6r57CyIi99cNgswywtkkIzDB2eSSdftmuGxp57RgfOfY38HlvRWVNqgmYsDb57sDkZK5hb1RHZQ9+U8bu37S/MtOc0zUg8G2U1yOV4WrTdcXrAqT4MDq0yokXVINEwb32pS9WOJfLmboueW0OGgtP05mj3IXTum6iuXHogDtr27an9D/eQBVijr2AiB/VvUQuePenNXZBfmhKrxEl6Hjv1vAHA2lJ1wRBcH9vf5+cH6k3DZANsei1eWCwIrm6uOf1Jsenq8v7Z4ActFJxrsBMo6gC0GAebPHq/Z6bqJoVyn/EQpGFK08MmF2B/Oj1wZKqtYzxeM5MJKY6dMNPQnnePR8FubkAAAAASUVORK5CYII=);
+}
+
+.nextArrow {
+  transform: rotate(180deg);
+}
+
+.weekBox {
+  display: flex;
+  align-items: center;
+  height: 72px;
+}
+
+.weekItem {
+  flex: 1;
+  font-size: 30px;
+  text-align: center;
+  color: #b8bfc6;
+}
+
+.dayBox {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.dayItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px 0;
+  flex: 0 0 calc(100% / 7);
+  height: 72px;
+  font-size: 30px;
+  color: #7c86a2;
+
+  &.blurDay {
+    color: #e1e4e7;
+  }
+}
+
+.dayItemContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+}
+
+.today {
+  .dayItemText {
+    font-weight: bold;
+    color: #667cff;
+  }
+}
+
+.currentDate {
+  .dayItemContainer {
+    background-color: #667cff;
+
+    .dayItemText {
+      color: #fff;
+    }
+  }
+}
