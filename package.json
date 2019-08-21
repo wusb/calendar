@@ -9,7 +9,8 @@
     "lint:style": "stylelint --fix src/**/*.scss",
     "build": "cross-env NODE_ENV=production webpack --config ./config/webpack/webpack.config.js",
     "start": "cross-env NODE_ENV=development webpack-dev-server --config ./config/webpack/webpack.config.js",
-    "analyzer": "yarn build --plugin webpack-bundle-analyzer/lib/BundleAnalyzerPlugin"
+    "analyzer": "yarn build --plugin webpack-bundle-analyzer/lib/BundleAnalyzerPlugin",
+    "deploy-docs": "node ./config/deploy-docs.js"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
@@ -30,6 +31,7 @@
     "postcss-loader": "^3.0.0",
     "postcss-px-to-viewport": "^1.1.1",
     "sass-loader": "^7.2.0",
+    "simple-git": "^1.124.0",
     "style-loader": "^1.0.0",
     "stylelint": "^10.1.0",
     "stylelint-config-booheefe": "^1.0.7",
