@@ -32,23 +32,18 @@ class Calendar {
     const controllerEl = utils.createElement('div', s.controller);
     const showMonthEl = utils.createElement('div', s.showMonth);
     const prevArrow = utils.createElement('button', s.controllerArrow);
-    prevArrow.dataset.action = 'prev';
+    prevArrow.onclick = () => this.switchMonth('prev');
     const nextArrow = utils.createElement(
       'button',
       `${s.controllerArrow} ${s.nextArrow}`
     );
-    nextArrow.dataset.action = 'next';
+    nextArrow.onclick = () => this.switchMonth('next');
 
     this.options.showMonthEl = showMonthEl;
     this.handelShowMonth();
     controllerEl.appendChild(prevArrow);
     controllerEl.appendChild(showMonthEl);
     controllerEl.appendChild(nextArrow);
-    controllerEl.addEventListener('click', e => {
-      const { action } = e.target.dataset;
-      this.switchMonth(action);
-    });
-
     containerEl.appendChild(controllerEl);
   }
 
@@ -79,23 +74,24 @@ class Calendar {
 
     days.forEach(day => {
       let dayItemClass = s.dayItem;
+      const dayValue = day.value;
+
       if (day.type !== 'current') {
         dayItemClass = `${dayItemClass} ${s.blurDay}`;
       }
 
-      if (day.value === today) {
+      if (dayValue === today) {
         dayItemClass = `${dayItemClass} ${s.today}`;
       }
 
-      if (day.value === currentDate) {
+      if (dayValue === currentDate) {
         dayItemClass = `${dayItemClass} ${s.currentDate}`;
       }
 
       const dayEl = utils.createElement('button', dayItemClass);
       dayEl.innerHTML = `<div class=${s.dayItemContainer}>
       <span class=${s.dayItemText}>${day.text}</span></div>`;
-      dayEl.dataset.value = day.value;
-      dayEl.onclick = () => this.chooseDate(day.value);
+      dayEl.onclick = () => this.chooseDate(dayValue);
       box.appendChild(dayEl);
     });
 
