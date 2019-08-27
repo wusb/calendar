@@ -58,8 +58,10 @@
   margin: 5px 0;
   flex: 0 0 calc(100% / 7);
   height: 72px;
+  border: 0;
   font-size: 30px;
   color: #7c86a2;
+  background: none;
 
   &.blurDay {
     color: #e1e4e7;
