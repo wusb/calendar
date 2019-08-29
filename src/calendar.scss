@@ -60,12 +60,7 @@
   height: 72px;
   border: 0;
   font-size: 30px;
-  color: #7c86a2;
   background: none;
-
-  &.blurDay {
-    color: #e1e4e7;
-  }
 }
 
 .dayItemContainer {
@@ -75,6 +70,18 @@
   width: 72px;
   height: 72px;
   border-radius: 50%;
+  transition: background-color 200ms ease;
+}
+
+.dayItemText {
+  color: #7c86a2;
+  transition: color 200ms ease;
+}
+
+.blurDay {
+  .dayItemText {
+    color: #e1e4e7;
+  }
 }
 
 .today {
