@@ -1,7 +1,7 @@
 {
   "name": "calendar",
   "version": "0.0.1",
-  "description": "calendar",
+  "description": "calendar 日历",
   "main": "lib/calendar.js",
   "scripts": {
     "lint": "yarn lint:es && yarn lint:style",
@@ -44,5 +44,18 @@
   },
   "repository": "git@github.com:simbawus/calendar.git",
   "author": "simbawu <code@simbawu.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "keywords": [
+    "calendar",
+    "datepicker",
+    "daypicker",
+    "date",
+    "picker",
+    "react",
+    "vue",
+    "angular",
+    "mobile",
+    "component",
+    "simbawu"
+  ]
 }
