@@ -195,7 +195,12 @@ class Calendar {
   }
 
   switchMonthOfDate(action) {
-    let { currentDate } = this.options;
+    let {
+      currentDate,
+      onClickPreMonth,
+      onClickNextMonth,
+      onMonthChange
+    } = this.options;
     currentDate = new Date(currentDate);
     const currentYear = currentDate.getFullYear();
     const currentMonth = currentDate.getMonth() + 1;
@@ -207,6 +212,8 @@ class Calendar {
         newYear = currentYear - 1;
         newMonth = 12;
       }
+
+      onClickPreMonth && onClickPreMonth();
     } else if (action === 'next') {
       newMonth = currentMonth + 1;
       newYear = currentYear;
@@ -214,8 +221,10 @@ class Calendar {
         newYear = currentYear + 1;
         newMonth = 1;
       }
+      onClickNextMonth && onClickNextMonth();
     }
 
+    onMonthChange && onMonthChange();
     const newDate = `${newYear}/${utils.formatNumber(newMonth)}/01`;
     return newDate;
   }
