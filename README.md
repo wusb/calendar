@@ -1,5 +1,9 @@
 # Clendar [Demo](https://simbawus.github.io/calendar)
 
+[![npm](https://img.shields.io/npm/v/calendar-lite.svg)](https://www.npmjs.com/package/calendar-lite)
+[![npm](https://img.shields.io/npm/dt/calendar-lite.svg)](https://www.npmjs.com/package/calendar-lite)
+[![GitHub license](https://img.shields.io/github/license/simbawus/calendar.svg)](https://github.com/simbawus/calendar/blob/master/LICENSE)
+
 ###### [中文 README](README-zh_CN.md)
 
 - Develop with native javascript, doesn't rely on any frameworks and libraries.

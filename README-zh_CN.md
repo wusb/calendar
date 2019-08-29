@@ -1,5 +1,9 @@
 # Clendar [Demo](https://simbawus.github.io/calendar)
 
+[![npm](https://img.shields.io/npm/v/calendar-lite.svg)](https://www.npmjs.com/package/calendar-lite)
+[![npm](https://img.shields.io/npm/dt/calendar-lite.svg)](https://www.npmjs.com/package/calendar-lite)
+[![GitHub license](https://img.shields.io/github/license/simbawus/calendar.svg)](https://github.com/simbawus/calendar/blob/master/LICENSE)
+
 ###### [README in English](README.md)
 
 - 原生 js 开发、不依赖任何框架和库的轻量级移动端数字键盘
