@@ -1,13 +1,13 @@
 # calendar [Demo](https://simbawus.github.io/calendar)
 
-###### [中文 README](README-zh_CN.md)
+###### [README in English](README.md)
 
-- Develop with native javascript, doesn't rely on any frameworks and libraries.
-- Easy API, easy use.
+- 原生 js 开发、不依赖任何框架和库的轻量级移动端数字键盘
+- API 简洁，非常好上手
 
 ![example](https://up.boohee.cn/house/u/pixiu/calendar.gif)
 
-## PropTypes
+## 属性
 
 | Property         | Type     | Default           | Description                            |
 | :--------------- | :------- | :---------------- | :------------------------------------- |
@@ -18,15 +18,15 @@
 | onClickNextMonth | Function | -                 | Trigger when clicking on the NextMonth |
 | onMonthChange    | Function | -                 | Trigger when month change              |
 
-## Getting Started
+## 开始上手
 
-### Install
+### 使用示例
 
 ```shell
 yarn add calendar --dev
 ```
 
-### Usage Example
+### 使用示例
 
 - **Native JavaScript**
 
@@ -161,10 +161,10 @@ export class AppComponent implements OnInit {
 }
 ```
 
-## How to Contribute
+## 如何贡献
 
-Anyone and everyone is welcome to contribute to this project. The best way to start is by checking our [open issues](https://github.com/simbawus/calendar/issues),[submit a new issues](https://github.com/simbawus/calendar/issues/new?labels=bug) or [feature request](https://github.com/simbawus/calendar/issues/new?labels=enhancement), participate in discussions, upvote or downvote the issues you like or dislike.
+欢迎每个人为这个项目做出贡献。可以从查看我们[未解决的问题](https://github.com/simbawus/calendar/issues),[提交新问题](https://github.com/simbawus/calendar/issues/new?labels=bug) 或[提出新功能](https://github.com/simbawus/calendar/issues/new?labels=enhancement), 入手，参与讨论投票您喜欢或不喜欢的问题。
 
-## License
+## 开源证书
 
 [**The MIT License**](LICENSE).
