@@ -1,4 +1,4 @@
-# calendar [Demo](https://simbawus.github.io/calendar)
+# Clendar [Demo](https://simbawus.github.io/calendar)
 
 ###### [README in English](README.md)
 
