@@ -1,5 +1,5 @@
 {
-  "name": "calendar",
+  "name": "calendar-lite",
   "version": "0.0.1",
   "description": "calendar 日历",
   "main": "lib/calendar.js",
