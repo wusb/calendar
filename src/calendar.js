@@ -1,13 +1,19 @@
 import utils from './utils';
 import s from './calendar.scss';
+
 const TOTAL_DAYS = 42; // 日历一共显示42天
 const today = utils.dateFormat(new Date(), 'yyyy/MM/dd');
 
 class Calendar {
   constructor(options) {
     const defaultOptions = {
-      currentDate: today
+      currentDate: today,
+      chooseDate: ''
     };
+
+    if (options.currentDate) {
+      defaultOptions.chooseDate = options.currentDate;
+    }
 
     this.options = { ...defaultOptions, ...options };
 
@@ -68,7 +74,7 @@ class Calendar {
   }
 
   renderDays() {
-    const { currentDate, daysEl } = this.options;
+    const { chooseDate, daysEl } = this.options;
     const days = this.generateCalendarGroup();
     const box = utils.createElement('div', s.dayBox);
 
@@ -84,14 +90,14 @@ class Calendar {
         dayItemClass = `${dayItemClass} ${s.today}`;
       }
 
-      if (dayValue === currentDate) {
-        dayItemClass = `${dayItemClass} ${s.currentDate}`;
+      if (dayValue === chooseDate) {
+        dayItemClass = `${dayItemClass} ${s.chooseDate}`;
       }
 
       const dayEl = utils.createElement('button', dayItemClass);
       dayEl.innerHTML = `<div class=${s.dayItemContainer}>
       <span class=${s.dayItemText}>${day.text}</span></div>`;
-      dayEl.onclick = () => this.chooseDate(dayValue);
+      dayEl.onclick = () => this.chooseDate(dayEl, dayValue);
       box.appendChild(dayEl);
     });
 
@@ -172,10 +178,13 @@ class Calendar {
     return dayList;
   }
 
-  chooseDate(date) {
+  chooseDate(el, date) {
     const { onDayClick } = this.options;
+    this.options.chooseDate = date;
     this.options.currentDate = date;
-    this.renderDays();
+    const chooseDateEl = document.getElementsByClassName(s.chooseDate)[0];
+    chooseDateEl && chooseDateEl.classList.remove(s.chooseDate);
+    el.classList.add(s.chooseDate);
     onDayClick && onDayClick(date);
   }
 
