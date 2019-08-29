@@ -9,14 +9,14 @@
 
 ## 属性
 
-| Property         | Type     | Default           | Description                            |
-| :--------------- | :------- | :---------------- | :------------------------------------- |
-| el               | DOM      | -                 | parent node                            |
-| currentDate      | String   | today(yyyy/MM/dd) | current Date                           |
-| onDayClick       | Function | -                 | Trigger when clicking on the date      |
-| onClickPreMonth  | Function | -                 | Trigger when clicking on the PreMonth  |
-| onClickNextMonth | Function | -                 | Trigger when clicking on the NextMonth |
-| onMonthChange    | Function | -                 | Trigger when month change              |
+| Property         | Type     | Default           | Description              |
+| :--------------- | :------- | :---------------- | :----------------------- |
+| el               | DOM      | -                 | 日历父节点               |
+| currentDate      | String   | today(yyyy/MM/dd) | 当前日期                 |
+| onDayClick       | Function | -                 | 点击日期时触发           |
+| onClickPreMonth  | Function | -                 | 点击箭头去上一个月时触发 |
+| onClickNextMonth | Function | -                 | 点击箭头去下一个月时触发 |
+| onMonthChange    | Function | -                 | 月份改变时触发           |
 
 ## 开始上手
 
