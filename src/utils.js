@@ -50,6 +50,7 @@ export default {
         (date.getFullYear() + '').substr(4 - RegExp.$1.length)
       );
     }
+    // eslint-disable-next-line no-unused-vars
     for (let k in o) {
       if (new RegExp('(' + k + ')').test(fmt)) {
         fmt = fmt.replace(
