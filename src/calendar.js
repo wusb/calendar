@@ -2,17 +2,23 @@ import utils from './utils';
 import s from './calendar.scss';
 
 const TOTAL_DAYS = 42; // 日历一共显示42天
-const today = utils.dateFormat(new Date(), 'yyyy/MM/dd');
+const DEFAULT_FORMAT = 'yyyy/MM/dd';
+const today = utils.dateFormat(new Date(), DEFAULT_FORMAT);
 
 class Calendar {
   constructor(options) {
     const defaultOptions = {
       currentDate: today,
+      format: DEFAULT_FORMAT,
+      monthFormat: 'yyyy年MM月',
       chooseDate: ''
     };
 
     if (options.currentDate) {
-      defaultOptions.chooseDate = options.currentDate;
+      defaultOptions.chooseDate = utils.dateFormat(
+        new Date(options.currentDate),
+        DEFAULT_FORMAT
+      );
     }
 
     this.options = { ...defaultOptions, ...options };
@@ -179,13 +185,13 @@ class Calendar {
   }
 
   chooseDate(el, date) {
-    const { onDayClick } = this.options;
+    const { onDayClick, format } = this.options;
     this.options.chooseDate = date;
     this.options.currentDate = date;
     const chooseDateEl = document.getElementsByClassName(s.chooseDate)[0];
     chooseDateEl && chooseDateEl.classList.remove(s.chooseDate);
     el.classList.add(s.chooseDate);
-    onDayClick && onDayClick(date);
+    onDayClick && onDayClick(utils.dateFormat(new Date(date), format));
   }
 
   switchMonth(action) {
@@ -230,9 +236,8 @@ class Calendar {
   }
 
   handelShowMonth() {
-    const { showMonthEl } = this.options;
-    let { currentDate } = this.options;
-    const showMonth = utils.dateFormat(new Date(currentDate), 'yyyy年MM月');
+    const { showMonthEl, currentDate, monthFormat } = this.options;
+    const showMonth = utils.dateFormat(new Date(currentDate), monthFormat);
     showMonthEl.textContent = showMonth;
   }
 }
