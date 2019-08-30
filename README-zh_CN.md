@@ -17,6 +17,8 @@
 | :--------------- | :------- | :---------------- | :----------------------- |
 | el               | DOM      | -                 | 日历父节点               |
 | currentDate      | String   | today(yyyy/MM/dd) | 当前日期                 |
+| format           | String   | yyyy/MM/dd        | 日期格式                 |
+| monthFormat      | String   | yyyy年MM月     | 月份格式                 |
 | onDayClick       | Function | -                 | 点击日期时触发           |
 | onClickPreMonth  | Function | -                 | 点击箭头去上一个月时触发 |
 | onClickNextMonth | Function | -                 | 点击箭头去下一个月时触发 |

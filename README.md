@@ -17,6 +17,8 @@
 | :--------------- | :------- | :---------------- | :------------------------------------- |
 | el               | DOM      | -                 | parent node                            |
 | currentDate      | String   | today(yyyy/MM/dd) | current Date                           |
+| format           | String   | yyyy/MM/dd        | date format                            |
+| monthFormat      | String   | yyyy年MM月     | month format                           |
 | onDayClick       | Function | -                 | Trigger when clicking on the date      |
 | onClickPreMonth  | Function | -                 | Trigger when clicking on the PreMonth  |
 | onClickNextMonth | Function | -                 | Trigger when clicking on the NextMonth |
