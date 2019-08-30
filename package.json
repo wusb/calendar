@@ -1,6 +1,6 @@
 {
   "name": "calendar-lite",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "calendar 日历",
   "main": "lib/calendar.js",
   "scripts": {
