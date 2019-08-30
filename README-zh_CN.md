@@ -27,7 +27,7 @@
 ### 使用示例
 
 ```shell
-yarn add calendar --dev
+yarn add calendar-lite --dev
 ```
 
 ### 使用示例

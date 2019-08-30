@@ -27,7 +27,7 @@
 ### Install
 
 ```shell
-yarn add calendar --dev
+yarn add calendar-lite --dev
 ```
 
 ### Usage Example
